@@ -1,1 +1,10 @@
-<p>home works!</p>
+<h1>HOME</h1>
+
+
+<!-- Usar ngFor para recorrer los elementos del Array definido en 'home.component.ts' -->
+
+<div *ngFor="let producto of productos">    <!-- La Variable 'producto' representa cada elemento del Array 'productos' -->
+    {{producto}}    <!-- Renderiza el contenido de la Variable -->
+</div>
+
+<!-- ngFor replica el elemento HTML seleccionado en cada iteración, en este caso el 'div' con su contenido -->

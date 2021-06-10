@@ -7,8 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  // Crear Array para mostrar
+
+  productos=[
+    "iPhone X",
+    "Moto G",
+    "iPhone 12"
+  ]
+
+
   constructor() { }
 
+
+  
   ngOnInit(): void {
   }
 
