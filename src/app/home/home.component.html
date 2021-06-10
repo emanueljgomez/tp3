@@ -4,7 +4,13 @@
 <!-- Usar ngFor para recorrer los elementos del Array definido en 'home.component.ts' -->
 
 <div *ngFor="let producto of productos">    <!-- La Variable 'producto' representa cada elemento del Array 'productos' -->
-    {{producto}}    <!-- Renderiza el contenido de la Variable -->
+    
+    {{producto | json}}    <!-- Utilizar Pipe 'Json' (| json) para "traducir" y poder mostrar el contenido del objeto 'producto' -->
+
+    <h2>{{producto.name}}</h2>  <!-- Una vez analizado el objeto con el Pipe Json, ya tenemos la información necesaria para mostrar las propiedades de ese objeto de forma individual -->
+    <p>{{producto.price}}</p>
+    <p>{{producto.description}}</p>
+
 </div>
 
 <!-- ngFor replica el elemento HTML seleccionado en cada iteración, en este caso el 'div' con su contenido -->

@@ -7,19 +7,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  // Crear Array para mostrar
+  // Crear Array de objetos para mostrar (Mockup data)
 
   productos=[
-    "iPhone X",
-    "Moto G",
-    "iPhone 12"
+    {
+      id: 1,
+      name:"iPhone X",
+      price:"1000",
+      description:"Desc iPhone X"
+    },
+
+    {
+      id:2,
+      name:"Moto G",
+      price:"500",
+      description:"Desc Moto G"
+    },
+    
+    {
+      id:3,
+      name:"iPhone 12",
+      price:"1500",
+      description:"Desc iPhone 12"
+    },
   ]
 
 
+  
   constructor() { }
 
 
-  
+
   ngOnInit(): void {
   }
 
