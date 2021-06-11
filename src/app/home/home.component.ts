@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// Los servicios deben importarse en el/los componentes donde serán usados
+import { ProductosService } from '../productos.service'; // Autoimport generado por la línea 46
 
 @Component({
   selector: 'app-home',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
+  /*
 
   // Crear Array de objetos para mostrar (Mockup data)
 
@@ -32,9 +36,17 @@ export class HomeComponent implements OnInit {
     },
   ]
 
+  */
 
+
+  productos=[]
   
-  constructor() { }
+
+  constructor(
+    private productosService:ProductosService // Injección de Dependencia -- Al escribir esta línea se genera automáticamente el import de ProductosService
+  ) {
+    this.productos = this.productosService.getAll();
+  }
 
 
 
