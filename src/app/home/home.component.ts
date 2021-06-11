@@ -39,13 +39,23 @@ export class HomeComponent implements OnInit {
   */
 
 
-  productos=[]
+  productos:any=[]  // Se define el array como "any" para evitar conflicto de tipo de datos (no es lo recomendable)
   
 
   constructor(
     private productosService:ProductosService // Injección de Dependencia -- Al escribir esta línea se genera automáticamente el import de ProductosService
   ) {
-    this.productos = this.productosService.getAll();
+    
+    /* this.productos = this.productosService.getAll(); */ // Con esta línea se obtiene la mockup data
+
+
+    this.productosService.getAll()
+    .subscribe(data=>{  // Método Subscribe: nos "suscribimos" al Observable, escuchando los cambios en tiempo real
+        console.log(data) // Se ejecuta la función al recibir novedades del Observable
+        this.productos=data
+    })
+
+
   }
 
 
