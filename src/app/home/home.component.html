@@ -1,16 +1,21 @@
-<h1>HOME</h1>
-
+<div class="container">
+<div style="margin-top: 2vh;">
+    <h1 class="text-center">HOME</h1>
+</div>
 
 <!-- Usar ngFor para recorrer los elementos del Array definido en 'home.component.ts' -->
-
-<div *ngFor="let producto of productos">    <!-- La Variable 'producto' representa cada elemento del Array 'productos' -->
+<div class="card d-inline-flex p-2 bd-highlight" style="width: 18rem; height: 24rem; margin:20px;" *ngFor="let producto of productos">    <!-- La Variable 'producto' representa cada elemento del Array 'productos' -->
+<div class="card-body">
     
-    {{producto | json}}    <!-- Utilizar Pipe 'Json' (| json) para "traducir" y poder mostrar el contenido del objeto 'producto' -->
+    <!-- {{producto | json}}     Utilizar Pipe 'Json' (| json) para "traducir" y poder mostrar el contenido del objeto 'producto' -->
 
-    <h2>{{producto.name}}</h2>  <!-- Una vez analizado el objeto con el Pipe Json, ya tenemos la información necesaria para mostrar las propiedades de ese objeto de forma individual -->
-    <p>{{producto.price}}</p>
-    <p>{{producto.description}}</p>
+    <h5 class="card-title">{{producto.name}}</h5>  <!-- Una vez analizado el objeto con el Pipe Json, ya tenemos la información necesaria para mostrar las propiedades de ese objeto de forma individual -->
+    <p class="card-text">{{producto.price}}</p>
+    <p class="card-text">{{producto.description}}</p>
 
 </div>
+</div>
+</div>
+
 
 <!-- ngFor replica el elemento HTML seleccionado en cada iteración, en este caso el 'div' con su contenido -->
