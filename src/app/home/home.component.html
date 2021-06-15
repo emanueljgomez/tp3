@@ -1,10 +1,10 @@
-<div class="container">
+<div class="container text-center">
 <div style="margin-top: 2vh;">
-    <h1 class="text-center">HOME</h1>
+    <h1>HOME</h1>
 </div>
 
 <!-- Usar ngFor para recorrer los elementos del Array definido en 'home.component.ts' -->
-<div class="card d-inline-flex p-2 bd-highlight" style="width: 18rem; height: 24rem; margin:20px;" *ngFor="let producto of productos">    <!-- La Variable 'producto' representa cada elemento del Array 'productos' -->
+<div class="card d-inline-flex" style="width: 20rem; height: 24rem; margin: 10px;" *ngFor="let producto of productos">    <!-- La Variable 'producto' representa cada elemento del Array 'productos' -->
 <div class="card-body">
     
     <!-- {{producto | json}}     Utilizar Pipe 'Json' (| json) para "traducir" y poder mostrar el contenido del objeto 'producto' -->
