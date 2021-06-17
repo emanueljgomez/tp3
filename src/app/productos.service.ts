@@ -42,7 +42,7 @@ export class ProductosService {
   // Método getAll: En este caso retornará el JSON de la API consumida
 
   getAll(){
-    return this.http.get("https://jsonfy.com/items")  // Devuelve un OBSERVABLE (asincrónico). No devuelve datos.
+    return this.http.get("https://jsonplaceholder.typicode.com/comments?postId=1")  // Devuelve un OBSERVABLE (asincrónico). No devuelve datos.
   }
 
 
@@ -65,5 +65,6 @@ export class ProductosService {
   getById(id){
     return this.http.get("https://jsonfy.com/items"+id)
   }
+  
 
 }

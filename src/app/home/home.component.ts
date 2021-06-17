@@ -43,24 +43,25 @@ export class HomeComponent implements OnInit {
   
 
   constructor(
-    private productosService:ProductosService // Injección de Dependencia -- Al escribir esta línea se genera automáticamente el import de ProductosService
+    private productosService:ProductosService, // Injección de Dependencia -- Al escribir esta línea se genera automáticamente el import de ProductosService
   ) {
     
     /* this.productos = this.productosService.getAll(); */ // Con esta línea se obtiene la mockup data
 
 
-    this.productosService.getAll()
-    .subscribe(data=>{  // Método Subscribe: nos "suscribimos" al Observable, escuchando los cambios en tiempo real
-        console.log(data) // Se ejecuta la función al recibir novedades del Observable
-        this.productos=data
-    })
+      this.productosService.getAll()
+      .subscribe(data=>{  // Método Subscribe: nos "suscribimos" al Observable, escuchando los cambios en tiempo real
+          console.log(data) // Se ejecuta la función al recibir novedades del Observable
+          this.productos=data
+       })
+   
+       
 
+    }    
 
-  }
-
-
-
-  ngOnInit(): void {
-  }
-
+    ngOnInit(): void {
+    
+    }
+  
+    
 }

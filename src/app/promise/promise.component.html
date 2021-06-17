@@ -1,0 +1,16 @@
+<div style="margin-top: 2vh;">
+    <h3>METODO CON PROMISE (ASYNC/AWAIT)</h3>
+</div>
+
+<div class="card d-inline-flex" style="width: 20rem; height: 24rem; margin: 10px;"
+*ngFor="let productoPromise of productosPromise"> <!-- No usar el pipe 'async' -->
+    <div class="card-body">
+
+    <p class="card-title"><b>Post ID: </b>{{productoPromise.postId}}</p>
+    <p class="card-text"><b>Message ID: </b>{{productoPromise.id}}</p>
+    <p class="card-text"><b>Name: </b>{{productoPromise.name}}</p>
+    <p class="card-text"><b>E-mail: </b> {{productoPromise.email}}</p>
+    <p class="card-text"><b>Message Body:</b><br>{{productoPromise.body}}</p>
+    
+    </div>
+</div>
